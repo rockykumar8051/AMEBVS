@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {{>heading}}
+</head>
+<body>
+    {{>navbar}}
+    
+ <section class="contact">
+        <div class="content">
+            <h2>Be a volunteer & any query</h2>
+            <p></p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>vishnupur (Mishra tola) <br> Begusarai(Bihar)</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <a href="tel:+9473919419">9473919419</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <a href="mailto:asthamahila.bv@gmail.com">asthamahila.bv@gmail.com</a>
+                    </div>
+                </div>
+                <div id="social-media">
+                      <a href="https://www.facebook.com/asthamahilaevambalvikash"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/asthamahila.bv/"><i class="fa fa-instagram" style="color: red;"></i></a>
+                <a href="https://twitter.com/AsthaEvam"><i class="fa fa-twitter" style="color: skyblue;"></i></a>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form action="">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="full_name" required="required">
+                        <span>Full name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="number" name="phone" required="required">
+                        <span>Phone</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                       <textarea name="query" required="required"></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" onclick="share()" name="" value="send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<script type="text/javascript"> 
+		
+		
+    function share() { 
+
+        
+        var full_name = $("input[name=full_name]").val(); 
+        var phone = $("input[name=phone]").val(); 
+        var Email = $("input[name=email]").val(); 
+        var query = $("textarea[name=query]").val(); 
+
+        // Opening URL 
+        window.open( 
+            "whatsapp://send?phone=+918789659001&text=Name:" + full_name + "%0aPhone: " +phone+
+            "%0aEmail: "+Email+"%0amessage: "+query,
+            // This is what makes it 
+            // open in a new window. 
+            '_blank' 
+        ); 
+    } 
+</script> 
+
+    {{>footer}}
+</body>
+</html>
