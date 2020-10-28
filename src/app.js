@@ -30,9 +30,7 @@ app.get("/donate", (req,res) =>{
 
 
 app.get("*", (req,res) =>{
-    res.render('404page', {
-        errorMsg : "Opps! page not found, Click Here to go back"
-    })
+   res.send("404");
 })
 
 

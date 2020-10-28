@@ -799,7 +799,7 @@ div.right{
    font-size: 26px;
 }
 @media screen and (max-width:768px){
-    .donate-container{
+    .donate-area{
         flex-direction: column;
         margin: 10px;
     }
